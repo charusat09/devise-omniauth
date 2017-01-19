@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <%- unless user_signed_in? %>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- user is not signed in starts -->
+          <li><%= link_to 'SignIn', new_user_session_path %></li>
+          <li><%= link_to 'SignUp', new_user_registration_path %></li>
+          <li><%= link_to 'Google+', new_user_registration_path  %></li>
+        </ul>
+        <!-- user is not signed in ends -->
+	    <% else %>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+        </ul>
+      <% end %>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

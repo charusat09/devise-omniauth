@@ -17,6 +17,7 @@ gem 'devise'
 gem 'devise-bootstrap-views'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
+gem 'bootstrap-sass', '~>3.3.6' # All the views are styled with bootstrap
 
 group :development, :test do
   gem 'byebug', platform: :mri
